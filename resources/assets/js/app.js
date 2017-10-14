@@ -12,10 +12,9 @@ Vue.use(VueRouter);
  const router = new VueRouter({
     mode: 'history',
     routes: [
-        { path: '/', component: require('./components/Example.vue') },
-        { path: '/example', component: require('./components/Example.vue') },
-        { path: '/example/1', component: require('./components/Example1.vue') },
-        { path: '/example/2', component: require('./components/Example2.vue') },
+        { path: '/', component: require('./components/Currency/Index.vue') },
+        { path: '/currencies', component: require('./components/Currency/Index.vue') , props: true},
+        { path: '/currencies/:name', component: require('./components/Currency/Index.vue'), props: true},
     ]
 });
 
